@@ -9,6 +9,7 @@ import 'package:zara_app/core/widgets/custom_textfield.dart';
 import 'package:zara_app/core/widgets/main_button.dart';
 import 'package:zara_app/core/widgets/social_login_button.dart';
 import 'package:zara_app/features/auth/sign_in_password_screen.dart';
+
 class SignInScreen extends StatelessWidget {
   const SignInScreen({super.key});
 
@@ -23,32 +24,29 @@ class SignInScreen extends StatelessWidget {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                const Gap(50),
+                const Gap(90),
 
                 Text(
                   'Sign in',
-                  style: TextStyles.title1.copyWith(
+                  style: TextStyles.headline1.copyWith(
                     color: AppColors.blackColor,
+                    fontSize: 32,
+                    fontWeight: .w700,
                   ),
                 ),
 
                 const Gap(28),
 
-                const CustomTextfield(
-                  hintText: 'Email Address',
-                ),
+                const CustomTextfield(hintText: 'Email Address'),
 
                 const Gap(16),
 
                 MainButton(
-  title: 'Continue',
-  ontap: () {
-    pushTo(
-      context,
-      const SignInPasswordScreen(),
-    );
-  },
-),
+                  title: 'Continue',
+                  ontap: () {
+                    pushTo(context, const SignInPasswordScreen());
+                  },
+                ),
                 const Gap(14),
 
                 Row(
@@ -57,15 +55,13 @@ class SignInScreen extends StatelessWidget {
                       "Don't have an Account? ",
                       style: TextStyles.caption2.copyWith(
                         color: AppColors.blackColor,
+                        fontWeight: .w400,
                       ),
                     ),
-                   GestureDetector(
-  onTap: () {
-    pushTo(
-      context,
-      const CreateAccountScreen(),
-    );
-  },
+                    GestureDetector(
+                      onTap: () {
+                        pushTo(context, const CreateAccountScreen());
+                      },
                       child: Text(
                         'Create One',
                         style: TextStyles.caption2.copyWith(

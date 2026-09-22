@@ -33,8 +33,8 @@ class CustomTextfield extends StatelessWidget {
         if (title != null) ...[
           Text(
             title!,
-            style: TextStyles.body.copyWith(
-              fontWeight: FontWeight.w600,
+            style: TextStyles.title2.copyWith(
+              fontWeight: FontWeight.w500,
               color: AppColors.blackColor,
             ),
           ),

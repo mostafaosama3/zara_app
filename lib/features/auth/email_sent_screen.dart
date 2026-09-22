@@ -21,16 +21,12 @@ class EmailSentScreen extends StatelessWidget {
             child: Column(
               mainAxisSize: MainAxisSize.min,
               children: [
-                CustomSvgImage(
-                  path: AppIcons.emailSent,
-                  width: 90,
-                  height: 90,
-                ),
+               Image.asset(AppIcons.emailSent,width: 100,height: 100,fit: BoxFit.cover,),
                 const Gap(28),
                 Text(
                   'We Sent you an Email to reset\nyour password.',
                   textAlign: TextAlign.center,
-                  style: TextStyles.body.copyWith(
+                  style: TextStyles.headline2.copyWith(
                     color: AppColors.blackColor,
                     fontWeight: FontWeight.w500,
                   ),

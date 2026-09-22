@@ -23,7 +23,7 @@ class CreateAccountScreen extends StatelessWidget {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                const Gap(20),
+                const Gap(30),
 
                 AppBackButton(
                   onTap: () {
@@ -37,6 +37,8 @@ class CreateAccountScreen extends StatelessWidget {
                   'Create Account',
                   style: TextStyles.title1.copyWith(
                     color: AppColors.blackColor,
+                    fontSize: 32,
+                    fontWeight: .w700,
                   ),
                 ),
 

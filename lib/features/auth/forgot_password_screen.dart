@@ -21,7 +21,7 @@ class ForgotPasswordScreen extends StatelessWidget {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                const Gap(20),
+                const Gap(30),
 
                 AppBackButton(
                   onTap: () {
@@ -35,6 +35,8 @@ class ForgotPasswordScreen extends StatelessWidget {
                   'Forgot Password',
                   style: TextStyles.title1.copyWith(
                     color: AppColors.blackColor,
+                    fontSize: 32,
+                    fontWeight: .w700,
                   ),
                 ),
 

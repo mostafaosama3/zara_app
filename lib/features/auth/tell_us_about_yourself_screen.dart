@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
+import 'package:iconsax_flutter/iconsax_flutter.dart';
 import 'package:zara_app/core/styles/appcolor.dart';
 import 'package:zara_app/core/styles/text_styles.dart';
 import 'package:zara_app/core/widgets/main_button.dart';
@@ -38,13 +39,13 @@ class _TellUsAboutYourselfScreenState
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              const Gap(20),
+              const Gap(120),
 
               Text(
                 'Tell us About yourself',
-                style: TextStyles.title2.copyWith(
+                style: TextStyles.headline2.copyWith(
                   color: AppColors.blackColor,
-                  fontWeight: FontWeight.w600,
+                  fontWeight: FontWeight.w700,
                 ),
               ),
 
@@ -52,7 +53,7 @@ class _TellUsAboutYourselfScreenState
 
               Text(
                 'Who do you shop for ?',
-                style: TextStyles.caption2.copyWith(
+                style: TextStyles.subtitle.copyWith(
                   color: AppColors.blackColor,
                 ),
               ),
@@ -91,8 +92,9 @@ class _TellUsAboutYourselfScreenState
 
               Text(
                 'How Old are you ?',
-                style: TextStyles.caption2.copyWith(
+                style: TextStyles.body.copyWith(
                   color: AppColors.blackColor,
+                    fontWeight: .w500,
                 ),
               ),
 
@@ -122,12 +124,12 @@ class _TellUsAboutYourselfScreenState
                 ),
                 hint: Text(
                   'Age Range',
-                  style: TextStyles.caption2.copyWith(
-                    color: AppColors.greyColor,
+                  style: TextStyles.body.copyWith(
+                    color: AppColors.blackColor,
                   ),
                 ),
                 icon: const Icon(
-                  Icons.keyboard_arrow_down,
+                  Iconsax.arrow_down_1_copy,
                   color: AppColors.blackColor,
                 ),
                 items: ageRanges.map((age) {
@@ -195,7 +197,7 @@ class _GenderButton extends StatelessWidget {
         ),
         child: Text(
           title,
-          style: TextStyles.caption2.copyWith(
+          style: TextStyles.body.copyWith(
             color: isSelected
                 ? AppColors.whiteColor
                 : AppColors.blackColor,

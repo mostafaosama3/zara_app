@@ -21,11 +21,13 @@ class SignInPasswordScreen extends StatelessWidget {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                const Gap(50),
+                const Gap(90),
 
                 Text(
                   'Sign in',
                   style: TextStyles.title1.copyWith(
+                    fontSize: 32,
+                    fontWeight:.w700,
                     color: AppColors.blackColor,
                   ),
                 ),
@@ -61,7 +63,7 @@ GestureDetector(
     'Forgot Password? Reset',
     style: TextStyles.caption2.copyWith(
       color: AppColors.blackColor,
-      fontWeight: FontWeight.w500,
+      fontWeight: FontWeight.w600,
     ),
   ),
 ),

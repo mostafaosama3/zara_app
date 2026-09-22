@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:iconsax_flutter/iconsax_flutter.dart';
+import 'package:iconsax_plus/iconsax_plus.dart';
 import 'package:zara_app/core/styles/appcolor.dart';
 
 class AppBackButton extends StatelessWidget {
@@ -22,8 +24,8 @@ class AppBackButton extends StatelessWidget {
           shape: BoxShape.circle,
         ),
         child: const Icon(
-          Icons.arrow_back_ios_new,
-          size: 16,
+         Iconsax.arrow_left_2_copy,
+          size: 20,
           color: AppColors.blackColor,
         ),
       ),

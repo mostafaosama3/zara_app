@@ -27,7 +27,7 @@ class MainButton extends StatelessWidget {
       ),
       child: Text(
         title,
-        style: TextStyles.caption1.copyWith(
+        style: TextStyles.body.copyWith(
           color: AppColors.whiteColor,
           fontWeight: FontWeight.w600,
         ),
