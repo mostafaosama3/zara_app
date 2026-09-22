@@ -21,7 +21,12 @@ class EmailSentScreen extends StatelessWidget {
             child: Column(
               mainAxisSize: MainAxisSize.min,
               children: [
-               Image.asset(AppIcons.emailSent,width: 100,height: 100,fit: BoxFit.cover,),
+                Image.asset(
+                  AppIcons.emailSent,
+                  width: 100,
+                  height: 100,
+                  fit: BoxFit.cover,
+                ),
                 const Gap(28),
                 Text(
                   'We Sent you an Email to reset\nyour password.',
@@ -37,10 +42,7 @@ class EmailSentScreen extends StatelessWidget {
                   height: 42,
                   child: ElevatedButton(
                     onPressed: () {
-                      pushReplacement(
-                        context,
-                        const SignInScreen(),
-                      );
+                      pushReplacement(context, const SignInScreen());
                     },
                     style: ElevatedButton.styleFrom(
                       elevation: 0,
