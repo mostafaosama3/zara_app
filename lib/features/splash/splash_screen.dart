@@ -26,7 +26,7 @@ class _SplashScreenState extends State<SplashScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: AppColors.primaryColor,
-      body: Center(child:Text("ZARA",style: TextStyle(color: AppColors.whiteColor,fontSize: 55,fontWeight: .w400,fontFamily:AppFonts.gabarito),)),
+      body: Center(child:Text("ZARA",style: TextStyle(color: AppColors.whiteColor,fontSize: 55,fontWeight: .w400,fontFamily: AppFonts.gabarito),)),
     );
   }
 }
