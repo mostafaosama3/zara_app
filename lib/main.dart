@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:zara_app/core/constants/app_fonts.dart';
+import 'package:zara_app/core/styles/appcolor.dart';
 import 'package:zara_app/features/splash/splash_screen.dart';
 
 void main() {
@@ -10,9 +12,15 @@ class MainApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
+    return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: SplashScreen(),
+      theme: ThemeData( 
+         splashColor: Colors.transparent,
+  highlightColor: Colors.transparent,
+        fontFamily: AppFonts.circularStd,
+        scaffoldBackgroundColor: AppColors.whiteColor,),
+      home: const SplashScreen(),
+      
     );
   }
 }
