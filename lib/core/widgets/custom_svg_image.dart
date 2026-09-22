@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/svg.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 
 class CustomSvgImage extends StatelessWidget {
   const CustomSvgImage({
@@ -21,8 +21,11 @@ class CustomSvgImage extends StatelessWidget {
       path,
       height: height,
       width: width,
-      colorFilter: (color != null)
-          ? ColorFilter.mode(color!, BlendMode.srcIn)
+      colorFilter: color != null
+          ? ColorFilter.mode(
+              color!,
+              BlendMode.srcIn,
+            )
           : null,
     );
   }

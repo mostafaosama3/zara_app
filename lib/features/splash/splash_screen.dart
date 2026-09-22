@@ -1,11 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/svg.dart';
 import 'package:zara_app/core/functions/Navigations.dart';
 import 'package:zara_app/core/styles/appcolor.dart';
 import 'package:zara_app/core/constants/app_fonts.dart';
-import 'package:zara_app/core/styles/text_styles.dart';
+import 'package:zara_app/features/auth/sign_in_screen.dart';
 
- class SplashScreen extends StatefulWidget {
+class SplashScreen extends StatefulWidget {
   const SplashScreen({super.key});
 
   @override
@@ -15,18 +14,33 @@ import 'package:zara_app/core/styles/text_styles.dart';
 class _SplashScreenState extends State<SplashScreen> {
   @override
   void initState() {
-    Future.delayed(Duration(seconds: 6), () {
-     // push To signin screen
-    });
     super.initState();
+
+    Future.delayed(const Duration(seconds: 3), () {
+      if (!mounted) return;
+
+      pushReplacement(
+        context,
+        const SignInScreen(),
+      );
+    });
   }
 
- 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: AppColors.primaryColor,
-      body: Center(child:Text("ZARA",style: TextStyle(color: AppColors.whiteColor,fontSize: 55,fontWeight: .w400,fontFamily:AppFonts.gabarito),)),
+      body: Center(
+        child: Text(
+          'ZARA',
+          style: TextStyle(
+            color: AppColors.whiteColor,
+            fontSize: 55,
+            fontWeight: FontWeight.w400,
+            fontFamily: AppFonts.gabarito,
+          ),
+        ),
+      ),
     );
   }
 }
