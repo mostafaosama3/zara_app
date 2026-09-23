@@ -1,5 +1,4 @@
 import 'package:zara_app/data/models/category_model.dart';
-import 'package:zara_app/data/models/notifications.dart';
 import 'package:zara_app/data/models/order.dart';
 import 'package:zara_app/data/models/user_cart_model.dart';
 
