@@ -174,27 +174,3 @@ final List<Order> orders = [
     shippingAddress: "21 Main Street, Cairo",
   ),
 ];
-final List<NotificationModel> notifications = [
-  NotificationModel(
-    id: 1,
-    title: "Order Shipped",
-    message: "Your order #456489 has been shipped.",
-    date: "Today",
-  ),
-
-  NotificationModel(
-    id: 2,
-    title: "Special Offer",
-    message: "Check out our latest collection.",
-    date: "Yesterday",
-    isRead: true,
-  ),
-
-  NotificationModel(
-    id: 3,
-    title: "Order Delivered",
-    message: "Your order #456765 has been delivered.",
-    date: "28 May",
-    isRead: true,
-  ),
-];
