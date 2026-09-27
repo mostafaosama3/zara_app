@@ -17,6 +17,7 @@ dependencies:
   gap: ^3.0.1
   iconsax_flutter: ^1.0.1
   iconsax_plus: ^1.0.0
+  timeline_tile: ^2.0.0
 
 dev_dependencies:
   flutter_test:

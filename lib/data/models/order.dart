@@ -1,21 +1,31 @@
 import 'package:zara_app/data/models/user_cart_model.dart';
 
-class Order {
-  final int id;
-  final String orderNumber;
-  final List<CartItem> items;
-  final double total;
-  final String status;
+class OrderStatusStep {
+  final String title;
   final String date;
-  final String shippingAddress;
+  final bool isCompleted;
 
-  Order({
-    required this.id,
-    required this.orderNumber,
-    required this.items,
-    required this.total,
-    required this.status,
+  OrderStatusStep({
+    required this.title,
     required this.date,
+    required this.isCompleted,
+  });
+}
+
+class OrderModel {
+  final String orderId;
+  final int itemsCount;
+  final String status; // Processing, Shipped, Delivered, etc.
+  final List trackingSteps;
+  final String shippingAddress;
+  final String phoneNumber;
+
+  OrderModel({
+    required this.orderId,
+    required this.itemsCount,
+    required this.status,
+    required this.trackingSteps,
     required this.shippingAddress,
+    required this.phoneNumber,
   });
 }

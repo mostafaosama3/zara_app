@@ -142,34 +142,35 @@ final List<CartItem> cartItems = [
     color: "Blue",
   ),
 ];
-final List<Order> orders = [
-  Order(
-    id: 1,
-    orderNumber: "#456765",
-    items: [cartItems[0]],
-    total: 40.0,
-    status: "Delivered",
-    date: "28 May",
-    shippingAddress: "21 Main Street, Cairo",
-  ),
+final List orders = [
+  OrderModel(
+      orderId: '456765',
+      itemsCount: 4,
+      status: 'Processing',
+      shippingAddress: '2715 Ash Dr. San Jose, South Dakota 83475',
+      phoneNumber: '121-224-7890',
+      trackingSteps: [
+        OrderStatusStep(title: 'Delivered', date: '28 May', isCompleted: false),
+        OrderStatusStep(title: 'Shipped', date: '28 May', isCompleted: true),
+        OrderStatusStep(title: 'Order Confirmed', date: '28 May', isCompleted: true),
+        OrderStatusStep(title: 'Order Placed', date: '28 May', isCompleted: true),
+      ],
+    ),
+    OrderModel(
+      orderId: '454569',
+      itemsCount: 2,
+      status: 'Processing',
+      shippingAddress: '2715 Ash Dr. San Jose, South Dakota 83475',
+      phoneNumber: '121-224-7890',
+      trackingSteps: [],
+    ),
+    OrderModel(
+      orderId: '454809',
+      itemsCount: 1,
+      status: 'Processing',
+      shippingAddress: '2715 Ash Dr. San Jose, South Dakota 83475',
+      phoneNumber: '121-224-7890',
+      trackingSteps: [],
+    ),
+  ]; 
 
-  Order(
-    id: 2,
-    orderNumber: "#456489",
-    items: [cartItems[1]],
-    total: 100.0,
-    status: "Shipped",
-    date: "26 May",
-    shippingAddress: "15 Business Street, Cairo",
-  ),
-
-  Order(
-    id: 3,
-    orderNumber: "#456320",
-    items: [cartItems[0], cartItems[1]],
-    total: 140.0,
-    status: "Order Confirmed",
-    date: "24 May",
-    shippingAddress: "21 Main Street, Cairo",
-  ),
-];
