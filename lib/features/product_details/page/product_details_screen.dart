@@ -266,7 +266,7 @@ class _ProductDetailsScreenState extends State<ProductDetailsScreen> {
                       "\$${_formatPrice(product.price * quantity)}",
                       style: TextStyles.body.copyWith(
                         fontWeight: FontWeight.bold,
-                        color: Colors.white,
+                        color: AppColors.whiteColor,
                       ),
                     ),
 
@@ -274,7 +274,7 @@ class _ProductDetailsScreenState extends State<ProductDetailsScreen> {
                       "Add to Bag",
                       style: TextStyles.body.copyWith(
                         fontWeight: FontWeight.bold,
-                        color: Colors.white,
+                        color: AppColors.whiteColor,
                       ),
                     ),
                   ],

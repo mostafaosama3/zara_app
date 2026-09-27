@@ -8,7 +8,7 @@ final List<ProductModel> products = [
   ProductModel(
     id: 1,
     name: "Men's Relaxed Fit Hoodie",
-    image: "assets/images/product_1.png",
+    image: "https://image.hm.com/assets/hm/28/50/2850d008f620127bb968cb432a5f0914022d7f6d.jpg?imwidth=2160",
     price: 40.0,
     category: "Hoodies",
     color: "Green",
@@ -20,7 +20,7 @@ final List<ProductModel> products = [
   ProductModel(
     id: 2,
     name: "Men's Oversized Hoodie",
-    image: "assets/images/product_2.png",
+    image: "https://image.hm.com/assets/hm/87/d2/87d2343b95dc263aea489f1e0ebe0fc64566181a.jpg?imwidth=2160",
     price: 45.0,
     category: "Hoodies",
     color: "Black",
@@ -31,7 +31,7 @@ final List<ProductModel> products = [
   ProductModel(
     id: 3,
     name: "Orange Zip Hoodie",
-    image: "assets/images/product_3.png",
+    image: "https://images.napali.app/global/dcshoes-products/all/default/hi-res/edysf03275_dcshoes,w_nls0_frt1.jpg",
     price: 42.0,
     category: "Hoodies",
     color: "Orange",
@@ -43,7 +43,7 @@ final List<ProductModel> products = [
   ProductModel(
     id: 4,
     name: "Printed Casual Shirt",
-    image: "assets/images/product_4.png",
+    image: "https://d3vfig6e0r0snz.cloudfront.net/rcYjnYuenaTH5vyDF/images/products/466c2c5e3b3dcc58c828b2fe74d32c0e.webp",
     price: 35.0,
     category: "Shirts",
     color: "Green",
@@ -54,7 +54,7 @@ final List<ProductModel> products = [
   ProductModel(
     id: 5,
     name: "Basic Cotton T-Shirt",
-    image: "assets/images/product_5.png",
+    image: "https://m.media-amazon.com/images/I/51aokCATY3L._AC_SY741_.jpg",
     price: 25.0,
     category: "Shirts",
     color: "White",
@@ -65,7 +65,7 @@ final List<ProductModel> products = [
   ProductModel(
     id: 6,
     name: "Wide Leg Jeans",
-    image: "assets/images/product_6.png",
+    image: "https://m.media-amazon.com/images/I/61keDFOy+BL._AC_SY879_.jpg",
     price: 50.0,
     category: "Jeans",
     color: "Blue",
@@ -76,7 +76,7 @@ final List<ProductModel> products = [
   ProductModel(
     id: 7,
     name: "Classic Sneakers",
-    image: "assets/images/product_7.png",
+    image: "https://d3vfig6e0r0snz.cloudfront.net/rcYjnYuenaTH5vyDF/images/products/f12e86c4d23bc706499d084d9128de0f.webp",
     price: 60.0,
     category: "Shoes",
     color: "White",
@@ -87,7 +87,7 @@ final List<ProductModel> products = [
   ProductModel(
     id: 8,
     name: "Casual Shoulder Bag",
-    image: "assets/images/product_8.png",
+    image: "https://d3vfig6e0r0snz.cloudfront.net/rcYjnYuenaTH5vyDF/images/products/2f7c19eb61a2a61a6fb3a741ad92540a.webp",
     price: 30.0,
     category: "Bags",
     color: "Brown",
@@ -100,31 +100,31 @@ final List<Category> categories = [
   Category(
     id: 1,
     name: "Hoodies",
-    image: "assets/images/category_hoodies.png",
+    image: "https://static.ftshp.digital/img/p/1/6/7/5/6/5/4/1675654-thickbox.jpg",
   ),
 
   Category(
     id: 2,
     name: "Accessories",
-    image: "assets/images/category_accessories.png",
+    image: "https://d3vfig6e0r0snz.cloudfront.net/rcYjnYuenaTH5vyDF/images/products/a49054d3187da6656dceba22aac87eac.webp",
   ),
 
   Category(
     id: 3,
-    name: "Shirts",
-    image: "assets/images/category_shirts.png",
+    name: "Shorts",
+    image: "https://d3vfig6e0r0snz.cloudfront.net/rcYjnYuenaTH5vyDF/images/products/57a3b084dbafe7433b8f95133c6596dd.webp",
   ),
 
   Category(
     id: 4,
     name: "Shoes",
-    image: "assets/images/category_shoes.png",
+    image: "https://cdn.dam.salomon.com/15ed8735-6ea9-4570-b0fb-b36d00a8c7bd/L49202000/PNG-2000px-max-72dpi.png?width=640&fit=cover&optimize=medium&bg-color=f5f5f5&format=pjpg&auto=avif&canvas=116p%2C144p",
   ),
 
   Category(
     id: 5,
     name: "Bags",
-    image: "assets/images/category_bags.png",
+    image: "https://i.ebayimg.com/thumbs/images/g/2TIAAeSw-Edpu9Bq/s-l500.jpg",
   ),
 ];
 final List<CartItem> cartItems = [
