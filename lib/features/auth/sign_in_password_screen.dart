@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
-import 'package:zara_app/features/auth/sign_in_password_screen.dart';
 import 'package:zara_app/core/styles/appcolor.dart';
 import 'package:zara_app/core/styles/text_styles.dart';
 import 'package:zara_app/core/widgets/custom_textfield.dart';
 import 'package:zara_app/core/widgets/main_button.dart';
 import 'package:zara_app/core/functions/Navigations.dart';
 import 'package:zara_app/features/auth/forgot_password_screen.dart';
+import 'package:zara_app/features/settings/SettingsSceen.dart';
 class SignInPasswordScreen extends StatelessWidget {
   const SignInPasswordScreen({super.key});
 
@@ -46,7 +46,7 @@ class SignInPasswordScreen extends StatelessWidget {
   ontap: () {
     pushTo(
       context,
-      const SignInPasswordScreen(),
+      const SettingsScreen(),
     );
   },
 ),
