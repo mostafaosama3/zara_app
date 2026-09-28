@@ -19,20 +19,17 @@ class SettingsScreen extends StatelessWidget {
           padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 16),
           child: Column(
             children: [
-              const Gap(20),
+              const Gap(50),
               // Profile Image
-              const 
-Center(
-  child: CircleAvatar(
-    radius: 40,
-    backgroundColor: AppColors.accentColor,
-    child: CustomSvgImage(
-      path: AppImages.profileSvg,
-      width: 40,
-      height: 40,
-    ),
-  ),
-),
+              Center(
+                child:
+                 CircleAvatar
+                 (
+                  radius: 50,
+                  child:
+                   ClipOval(child: Image.network("https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcR0NRi3YLt-O7IdyjcroPZnWk9E7X7_Pzjpt7TLpsxjzAw14IQh",width: 100,height: 100,fit: BoxFit.cover,))
+                   ),
+                   ),
               const Gap(24),
 
               // User Info Card
@@ -57,14 +54,14 @@ Center(
                             color: AppColors.blackColor,
                           ),
                         ),
-                        const Gap(4),
+                        const Gap(6),
                         Text(
                           'Gilbertjones001@gmail.com',
                           style: TextStyles.caption1.copyWith(
                             color: AppColors.greyColor,
                           ),
                         ),
-                        const Gap(4),
+                        const Gap(6),
                         Text(
                           '121-224-7890',
                           style: TextStyles.caption1.copyWith(
@@ -106,7 +103,7 @@ Center(
                 onTap: () {},
               ),
 
-              const Gap(40),
+              const Gap(200),
 
               // Sign Out Button
               TextButton(
