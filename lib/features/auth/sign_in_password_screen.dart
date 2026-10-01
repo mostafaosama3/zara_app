@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
+import 'package:zara_app/features/Main/main_app_screen.dart';
 import 'package:zara_app/features/auth/sign_in_password_screen.dart';
 import 'package:zara_app/core/styles/appcolor.dart';
 import 'package:zara_app/core/styles/text_styles.dart';
@@ -44,9 +45,9 @@ class SignInPasswordScreen extends StatelessWidget {
                MainButton(
   title: 'Continue',
   ontap: () {
-    pushTo(
+    pushReplacement(
       context,
-      const SignInPasswordScreen(),
+      const MainAppScreen(),
     );
   },
 ),

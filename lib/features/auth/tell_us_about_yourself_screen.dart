@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
 import 'package:iconsax_flutter/iconsax_flutter.dart';
+import 'package:zara_app/core/functions/navigations.dart';
 import 'package:zara_app/core/styles/appcolor.dart';
 import 'package:zara_app/core/styles/text_styles.dart';
 import 'package:zara_app/core/widgets/main_button.dart';
+import 'package:zara_app/features/Main/main_app_screen.dart';
 
 class TellUsAboutYourselfScreen extends StatefulWidget {
   const TellUsAboutYourselfScreen({super.key});
@@ -154,7 +156,9 @@ class _TellUsAboutYourselfScreenState
 
               MainButton(
                 title: 'Finish',
-                ontap: () {},
+                ontap: () {
+                  pushReplacement(context, MainAppScreen());
+                },
               ),
 
               const Gap(10),

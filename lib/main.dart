@@ -29,7 +29,7 @@ class MainApp extends StatelessWidget {
         appBarTheme: AppBarTheme(backgroundColor: AppColors.whiteColor),
         scaffoldBackgroundColor: AppColors.whiteColor,
       ),
-      home: MainAppScreen(),
+      home: SplashScreen(),
     );
   }
 }
