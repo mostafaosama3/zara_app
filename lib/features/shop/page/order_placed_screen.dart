@@ -79,6 +79,7 @@ class OrderPlacedScreen extends StatelessWidget {
                   ),
                   ),
           ),
+          
         ],
         ),
       ),
