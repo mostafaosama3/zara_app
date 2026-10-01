@@ -7,4 +7,5 @@ class AppImages {
   static const String notificationSvg = 'Assets/icons/notification.svg';
   static const String profileSvg = 'Assets/icons/profile.svg';
   static const String receiptSvg = 'Assets/icons/receipt.svg';
+  static const String orderplaced = 'Assets/images/orderplaced.png';
 }

@@ -42,7 +42,7 @@ class ForgotPasswordScreen extends StatelessWidget {
 
                 const Gap(28),
 
-                const CustomTextfield(
+                 CustomTextfield(
                   hintText: 'Enter Email address',
                 ),
 

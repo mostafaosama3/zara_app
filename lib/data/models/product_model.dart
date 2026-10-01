@@ -1,7 +1,7 @@
 class ProductModel {
   final int id;
   final String name;
-  final String image;
+  final String path;
   final double price;
   final double? oldPrice;
   final String category;
@@ -14,7 +14,7 @@ class ProductModel {
   ProductModel({
     required this.id,
     required this.name,
-    required this.image,
+    required this.path,
     required this.price,
     this.oldPrice,
     required this.category,

@@ -57,10 +57,13 @@ class _ProductDetailsScreenState extends State<ProductDetailsScreen> {
     return Scaffold(
       backgroundColor: AppColors.whiteColor,
       appBar: AppBar(
-        backgroundColor: AppColors.whiteColor,
         elevation: 0,
         leading: IconButton(
-          icon: AppBackButton(onTap: () {}),
+          icon: AppBackButton(
+            onTap: () {
+              Navigator.pop(context);
+            },
+          ),
           onPressed: () {},
         ),
         actions: [AppFavouriteButton(onTap: () {})],
@@ -75,7 +78,7 @@ class _ProductDetailsScreenState extends State<ProductDetailsScreen> {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   // 1. صور المنتج (معرض الصور الأفقي)
-                  ProductImage(url: product.image),
+                  ProductImage(url: product.path),
 
                   const Gap(16),
 

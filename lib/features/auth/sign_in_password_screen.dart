@@ -34,7 +34,7 @@ class SignInPasswordScreen extends StatelessWidget {
 
                 const Gap(28),
 
-                const CustomTextfield(
+                 CustomTextfield(
                   hintText: 'Password',
                   obscureText: true,
                 ),

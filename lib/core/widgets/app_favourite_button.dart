@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:iconsax_flutter/iconsax_flutter.dart';
 import 'package:iconsax_plus/iconsax_plus.dart';
+import 'package:zara_app/core/constants/app_icons.dart';
+import 'package:zara_app/core/constants/appimages.dart';
 import 'package:zara_app/core/styles/appcolor.dart';
+import 'package:zara_app/core/widgets/custom_svg_image.dart';
 
 class AppFavouriteButton extends StatelessWidget {
   const AppFavouriteButton({
@@ -23,11 +26,10 @@ class AppFavouriteButton extends StatelessWidget {
           color: AppColors.accentColor,
           shape: BoxShape.circle,
         ),
-        child: const Icon(
-         Iconsax.heart_copy,
-          size: 20,
-          color: AppColors.blackColor,
-        ),
+        child: Padding(
+          padding: const EdgeInsets.all(8.0),
+          child: CustomSvgImage(path: AppImages.heartSvg),
+        )
       ),
     );
   }

@@ -37,7 +37,7 @@ class SignInScreen extends StatelessWidget {
 
                 const Gap(28),
 
-                const CustomTextfield(hintText: 'Email Address'),
+                 CustomTextfield(hintText: 'Email Address'),
 
                 const Gap(16),
 

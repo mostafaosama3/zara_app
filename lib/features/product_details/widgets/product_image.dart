@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:zara_app/core/widgets/app_image.dart';
 
 class ProductImage extends StatelessWidget {
   final String url;
@@ -18,17 +19,11 @@ class ProductImage extends StatelessWidget {
         child: SizedBox(
           height: 350, // الطول المناسب بالظبط زي التصميم
           width: double.infinity,
-          child: url.startsWith('http')
-              ? Image.network(
-                  url,
-                  fit: BoxFit.contain,
-                  errorBuilder: _imageError,
-                )
-              : Image.asset(
-                  url,
-                  fit: BoxFit.contain,
-                  errorBuilder: _imageError,
-                ),
+          child: AppImage(
+            path: url,
+            fit: BoxFit.contain,
+            errorBuilder: _imageError,
+          ),
         ),
       ),
     );

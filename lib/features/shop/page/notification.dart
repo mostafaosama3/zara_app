@@ -7,6 +7,7 @@ import 'package:zara_app/core/styles/appcolor.dart';
 import 'package:zara_app/core/styles/text_styles.dart';
 import 'package:zara_app/core/widgets/custom_svg_image.dart';
 import 'package:zara_app/features/auth/sign_in_screen.dart';
+import 'package:zara_app/features/home/categories_screen.dart';
 
 class Notifications extends StatelessWidget {
   const Notifications({super.key});
@@ -46,7 +47,7 @@ class Notifications extends StatelessWidget {
                 height: 52,
                 child: ElevatedButton(
                   onPressed: () {
-                    // push to Category
+                    pushReplacement(context, CategoriesScreen());
                   },
                   style: ElevatedButton.styleFrom(
                     elevation: 0,

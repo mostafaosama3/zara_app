@@ -4,7 +4,7 @@ import 'package:zara_app/core/styles/appcolor.dart';
 import 'package:zara_app/core/styles/text_styles.dart';
 
 class CustomTextfield extends StatelessWidget {
-  const CustomTextfield({
+   CustomTextfield({
     super.key,
     this.title,
     required this.hintText,
@@ -24,7 +24,6 @@ class CustomTextfield extends StatelessWidget {
   final bool obscureText;
   final TextInputType? keyboardType;
   final String? Function(String?)? validator;
-
   @override
   Widget build(BuildContext context) {
     return Column(
