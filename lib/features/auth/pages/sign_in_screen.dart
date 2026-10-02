@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
-import 'package:zara_app/features/auth/create_account_screen.dart';
+import 'package:zara_app/features/auth/pages/create_account_screen.dart';
 import 'package:zara_app/core/functions/Navigations.dart';
 import 'package:zara_app/core/constants/app_icons.dart';
 import 'package:zara_app/core/styles/appcolor.dart';
 import 'package:zara_app/core/styles/text_styles.dart';
 import 'package:zara_app/core/widgets/custom_textfield.dart';
 import 'package:zara_app/core/widgets/main_button.dart';
-import 'package:zara_app/core/widgets/social_login_button.dart';
-import 'package:zara_app/features/auth/sign_in_password_screen.dart';
+import 'package:zara_app/features/auth/widgets/social_login_button.dart';
+import 'package:zara_app/features/auth/pages/sign_in_password_screen.dart';
 
 class SignInScreen extends StatefulWidget {
   const SignInScreen({super.key});

@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:zara_app/core/functions/navigations.dart';
 import 'package:zara_app/core/widgets/app_back_button.dart';
-import 'package:zara_app/features/home/category_products_screen.dart';
+import 'package:zara_app/features/home/pages/category_products_screen.dart';
 import 'package:zara_app/data/models/dummy_data.dart';
-import 'package:zara_app/features/home/home_screen.dart';
+import 'package:zara_app/features/home/pages/home_screen.dart';
 import 'package:zara_app/features/home/widgets/category_tile.dart';
 
 class CategoriesScreen extends StatelessWidget {

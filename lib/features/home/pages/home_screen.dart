@@ -6,16 +6,16 @@ import 'package:zara_app/core/styles/appcolor.dart';
 import 'package:zara_app/core/widgets/custom_svg_image.dart';
 import 'package:zara_app/core/widgets/custom_textfield.dart';
 import 'package:zara_app/data/models/product_model.dart';
-import 'package:zara_app/features/home/categories_screen.dart';
-import 'package:zara_app/features/home/category_products_screen.dart';
+import 'package:zara_app/features/home/pages/categories_screen.dart';
+import 'package:zara_app/features/home/pages/category_products_screen.dart';
 import 'package:zara_app/data/models/dummy_data.dart';
 import 'package:zara_app/features/home/widgets/category_tile.dart';
 import 'package:zara_app/features/home/widgets/product_card.dart';
 import 'package:zara_app/features/home/widgets/product_carousel.dart';
 import 'package:zara_app/features/product_details/page/product_details_screen.dart';
 import 'package:zara_app/features/shop/page/cart_screen.dart';
-import 'widgets/home_header.dart';
-import 'widgets/section_header.dart';
+import '../widgets/home_header.dart';
+import '../widgets/section_header.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});

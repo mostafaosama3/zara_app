@@ -3,7 +3,7 @@ import 'package:flutter_svg/svg.dart';
 import 'package:zara_app/core/constants/appimages.dart';
 import 'package:zara_app/core/styles/appcolor.dart';
 import 'package:zara_app/core/widgets/custom_svg_image.dart';
-import 'package:zara_app/features/home/home_screen.dart';
+import 'package:zara_app/features/home/pages/home_screen.dart';
 import 'package:zara_app/features/settings/SettingsSceen.dart';
 import 'package:zara_app/features/shop/page/notification.dart';
 import 'package:zara_app/features/shop/page/order.dart';

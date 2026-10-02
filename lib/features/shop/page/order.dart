@@ -7,8 +7,8 @@ import 'package:zara_app/core/styles/appcolor.dart';
 import 'package:zara_app/core/styles/text_styles.dart';
 import 'package:zara_app/core/widgets/custom_svg_image.dart';
 import 'package:zara_app/core/widgets/main_button.dart';
-import 'package:zara_app/features/auth/sign_in_screen.dart';
-import 'package:zara_app/features/home/categories_screen.dart';
+import 'package:zara_app/features/auth/pages/sign_in_screen.dart';
+import 'package:zara_app/features/home/pages/categories_screen.dart';
 
 class OrderScreen extends StatelessWidget {
   const OrderScreen({super.key});

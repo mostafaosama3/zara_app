@@ -6,8 +6,8 @@ import 'package:zara_app/core/widgets/app_back_button.dart';
 import 'package:zara_app/core/widgets/custom_textfield.dart';
 import 'package:zara_app/core/widgets/main_button.dart';
 import 'package:zara_app/core/functions/Navigations.dart';
-import 'package:zara_app/features/auth/forgot_password_screen.dart';
-import 'package:zara_app/features/auth/tell_us_about_yourself_screen.dart';
+import 'package:zara_app/features/auth/pages/forgot_password_screen.dart';
+import 'package:zara_app/features/auth/pages/tell_us_about_yourself_screen.dart';
 
 class CreateAccountScreen extends StatefulWidget {
   const CreateAccountScreen({super.key});

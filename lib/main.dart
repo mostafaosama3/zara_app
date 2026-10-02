@@ -3,7 +3,7 @@ import 'package:zara_app/core/constants/app_fonts.dart';
 import 'package:zara_app/core/styles/appcolor.dart';
 import 'package:zara_app/data/models/dummy_data.dart';
 import 'package:zara_app/features/Main/main_app_screen.dart';
-import 'package:zara_app/features/home/home_screen.dart';
+import 'package:zara_app/features/home/pages/home_screen.dart';
 import 'package:zara_app/features/product_details/page/product_details_screen.dart';
 import 'package:zara_app/features/shop/page/cart_screen.dart';
 import 'package:zara_app/features/shop/page/notification.dart';

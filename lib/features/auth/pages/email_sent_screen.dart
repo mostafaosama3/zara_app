@@ -5,7 +5,7 @@ import 'package:zara_app/core/functions/Navigations.dart';
 import 'package:zara_app/core/styles/appcolor.dart';
 import 'package:zara_app/core/styles/text_styles.dart';
 import 'package:zara_app/core/widgets/custom_svg_image.dart';
-import 'package:zara_app/features/auth/sign_in_screen.dart';
+import 'package:zara_app/features/auth/pages/sign_in_screen.dart';
 
 class EmailSentScreen extends StatelessWidget {
   const EmailSentScreen({super.key});

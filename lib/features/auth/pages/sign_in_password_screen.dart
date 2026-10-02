@@ -3,35 +3,32 @@ import 'package:gap/gap.dart';
 
 import 'package:zara_app/core/styles/appcolor.dart';
 import 'package:zara_app/core/styles/text_styles.dart';
-import 'package:zara_app/core/widgets/app_back_button.dart';
 import 'package:zara_app/core/widgets/custom_textfield.dart';
 import 'package:zara_app/core/widgets/main_button.dart';
 import 'package:zara_app/core/functions/Navigations.dart';
-import 'package:zara_app/features/auth/email_sent_screen.dart';
+import 'package:zara_app/features/Main/main_app_screen.dart';
+import 'package:zara_app/features/auth/pages/forgot_password_screen.dart';
 
-class ForgotPasswordScreen extends StatefulWidget {
-  const ForgotPasswordScreen({super.key});
+class SignInPasswordScreen extends StatefulWidget {
+  const SignInPasswordScreen({super.key});
 
   @override
-  State<ForgotPasswordScreen> createState() =>
-      _ForgotPasswordScreenState();
+  State<SignInPasswordScreen> createState() =>
+      _SignInPasswordScreenState();
 }
 
-class _ForgotPasswordScreenState
-    extends State<ForgotPasswordScreen> {
+class _SignInPasswordScreenState
+    extends State<SignInPasswordScreen> {
+
   final GlobalKey<FormState> formKey = GlobalKey<FormState>();
 
-  String? validateEmail(String? value) {
-    if (value == null || value.trim().isEmpty) {
-      return 'Please enter your email';
+  String? validatePassword(String? value) {
+    if (value == null || value.isEmpty) {
+      return 'Please enter your password';
     }
 
-    final emailRegex = RegExp(
-      r'^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$',
-    );
-
-    if (!emailRegex.hasMatch(value.trim())) {
-      return 'Please enter a valid email';
+    if (value.length < 6) {
+      return 'Password must be at least 6 characters';
     }
 
     return null;
@@ -39,10 +36,10 @@ class _ForgotPasswordScreenState
 
   void continueButton() {
     if (formKey.currentState!.validate()) {
-      pushTo(
-        context,
-        const EmailSentScreen(),
-      );
+
+    
+       pushTo(context, const MainAppScreen());
+      
     }
   }
 
@@ -50,47 +47,62 @@ class _ForgotPasswordScreenState
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: AppColors.whiteColor,
+
       body: SafeArea(
         child: SingleChildScrollView(
           child: Padding(
             padding: const EdgeInsets.symmetric(horizontal: 24),
+
             child: Form(
               key: formKey,
+
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  const Gap(30),
 
-                  AppBackButton(
-                    onTap: () {
-                      Navigator.pop(context);
-                    },
-                  ),
-
-                  const Gap(30),
+                  const Gap(90),
 
                   Text(
-                    'Forgot Password',
+                    'Sign in',
                     style: TextStyles.title1.copyWith(
-                      color: AppColors.blackColor,
                       fontSize: 32,
                       fontWeight: FontWeight.w700,
+                      color: AppColors.blackColor,
                     ),
                   ),
 
                   const Gap(28),
 
                   CustomTextfield(
-                    hintText: 'Enter Email address',
-                    keyboardType: TextInputType.emailAddress,
-                    validator: validateEmail,
+                    hintText: 'Password',
+                    obscureText: true,
+                    validator: validatePassword,
                   ),
 
-                  const Gap(24),
+                  const Gap(16),
 
                   MainButton(
                     title: 'Continue',
                     ontap: continueButton,
+                  ),
+
+                  const Gap(14),
+
+                  GestureDetector(
+                    onTap: () {
+                      pushTo(
+                        context,
+                        const ForgotPasswordScreen(),
+                      );
+                    },
+
+                    child: Text(
+                      'Forgot Password? Reset',
+                      style: TextStyles.caption2.copyWith(
+                        color: AppColors.blackColor,
+                        fontWeight: FontWeight.w600,
+                      ),
+                    ),
                   ),
                 ],
               ),
