@@ -31,10 +31,6 @@ The project currently uses:
 
 * [`flutter_svg`](https://pub.dev/packages/flutter_svg) — SVG rendering
 * [`gap`](https://pub.dev/packages/gap) — spacing between widgets
-* [`iconsax_flutter`](https://pub.dev/packages/iconsax_flutter) — Iconsax icons
-* [`iconsax_plus`](https://pub.dev/packages/iconsax_plus) — Additional Iconsax icons
-* [`timeline_tile`](https://pub.dev/packages/timeline_tile) — Timeline UI components
-
 The dependencies and Flutter SDK requirement are defined in `pubspec.yaml`.
 
 ## 📁 Project Structure
@@ -125,24 +121,45 @@ These fonts are configured directly in `pubspec.yaml`.
 
 ## 🧩 Application Screens
 <h2>📸 Screenshots</h2>
+<table>
+  <tr>
+    <td><img src="screenshots/1.png" width="200"></td>
+    <td><img src="screenshots/2.png" width="200"></td>
+    <td><img src="screenshots/3.png" width="200"></td>
+    <td><img src="screenshots/4.png" width="200"></td>
+  </tr>
+  <tr>
+    <td><img src="screenshots/5.png" width="200"></td>
+    <td><img src="screenshots/6.png" width="200"></td>
+    <td><img src="screenshots/7.png" width="200"></td>
+    <td><img src="screenshots/8.png" width="200"></td>
+ 
+  </tr>
+<tr>
+<td><img src="screenshots/9.png" width="200"></td>
+<td><img src="screenshots/10.png" width="200"></td>
+<td><img src="screenshots/11.png" width="200"></td>
+<td><img src="screenshots/12.png" width="200"></td>
+  
+</tr>
+<tr>
+<td><img src="screenshots/13.png" width="200"></td>
+<td><img src="screenshots/14.png" width="200"></td>
+<td><img src="screenshots/15.png" width="200"></td>
+<td><img src="screenshots/16.png" width="200"></td>
+  
+</tr>
+<tr>
+<td><img src="screenshots/17.png" width="200"></td>
+<td><img src="screenshots/18.png" width="200"></td>
+<td><img src="screenshots/19.png" width="200"></td>
+<td><img src="screenshots/20.png" width="200"></td>
+  
+</tr>
+ <td></td>
+</table>
 
 
-<h3>🏠 Home & Discovery</h3>
-
-<p align="center">
-  <img src="docs/screenshots/home/home.png" width="200"/>
-  <img src="docs/screenshots/home/categories.png" width="200"/>
-  <img src="docs/screenshots/home/search.png" width="200"/>
-</p>
-
-<h3>🛍️ Products</h3>
-
-<p align="center">
-  <img src="docs/screenshots/products/products.png" width="200"/>
-  <img src="docs/screenshots/products/product-details.png" width="200"/>
-  <img src="docs/screenshots/products/product-options.png" width="200"/>
-  <img src="docs/screenshots/products/reviews.png" width="200"/>
-</p>
 
 ### Splash
 
