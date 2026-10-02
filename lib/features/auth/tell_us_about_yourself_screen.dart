@@ -1,3 +1,4 @@
+
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
 import 'package:iconsax_flutter/iconsax_flutter.dart';
@@ -17,8 +18,11 @@ class TellUsAboutYourselfScreen extends StatefulWidget {
 
 class _TellUsAboutYourselfScreenState
     extends State<TellUsAboutYourselfScreen> {
-  String selectedGender = 'Men';
+  String? selectedGender;
   String? selectedAge;
+
+  String? genderError;
+  String? ageError;
 
   final List<String> ageRanges = [
     '18 - 24',
@@ -28,16 +32,36 @@ class _TellUsAboutYourselfScreenState
     '55+',
   ];
 
+  void validateAndFinish() {
+    setState(() {
+      genderError = selectedGender == null
+          ? 'Please select who you shop for'
+          : null;
+
+      ageError = selectedAge == null
+          ? 'Please select your age range'
+          : null;
+    });
+
+    if (selectedGender != null && selectedAge != null) {
+      // هنا حطي الشاشة اللي عايزة تروحي لها بعد Finish
+      // مثال:
+      // pushTo(context, const HomeScreen());
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: AppColors.whiteColor,
+
       body: SafeArea(
         child: Padding(
           padding: const EdgeInsets.symmetric(
             horizontal: 24,
             vertical: 24,
           ),
+
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
@@ -71,11 +95,14 @@ class _TellUsAboutYourselfScreenState
                       onTap: () {
                         setState(() {
                           selectedGender = 'Men';
+                          genderError = null;
                         });
                       },
                     ),
                   ),
+
                   const Gap(12),
+
                   Expanded(
                     child: _GenderButton(
                       title: 'Women',
@@ -83,6 +110,7 @@ class _TellUsAboutYourselfScreenState
                       onTap: () {
                         setState(() {
                           selectedGender = 'Women';
+                          genderError = null;
                         });
                       },
                     ),
@@ -90,13 +118,24 @@ class _TellUsAboutYourselfScreenState
                 ],
               ),
 
+              if (genderError != null) ...[
+                const Gap(6),
+                Text(
+                  genderError!,
+                  style: const TextStyle(
+                    color: Colors.red,
+                    fontSize: 12,
+                  ),
+                ),
+              ],
+
               const Gap(30),
 
               Text(
                 'How Old are you ?',
                 style: TextStyles.body.copyWith(
                   color: AppColors.blackColor,
-                    fontWeight: .w500,
+                  fontWeight: FontWeight.w500,
                 ),
               ),
 
@@ -104,36 +143,60 @@ class _TellUsAboutYourselfScreenState
 
               DropdownButtonFormField<String>(
                 initialValue: selectedAge,
+
                 decoration: InputDecoration(
                   filled: true,
                   fillColor: AppColors.accentColor,
+
                   contentPadding: const EdgeInsets.symmetric(
                     horizontal: 16,
                     vertical: 14,
                   ),
+
                   border: OutlineInputBorder(
                     borderRadius: BorderRadius.circular(100),
                     borderSide: BorderSide.none,
                   ),
+
                   enabledBorder: OutlineInputBorder(
                     borderRadius: BorderRadius.circular(100),
                     borderSide: BorderSide.none,
                   ),
+
                   focusedBorder: OutlineInputBorder(
                     borderRadius: BorderRadius.circular(100),
                     borderSide: BorderSide.none,
                   ),
+
+                  errorBorder: OutlineInputBorder(
+                    borderRadius: BorderRadius.circular(100),
+                    borderSide: const BorderSide(
+                      color: Colors.red,
+                    ),
+                  ),
+
+                  focusedErrorBorder: OutlineInputBorder(
+                    borderRadius: BorderRadius.circular(100),
+                    borderSide: const BorderSide(
+                      color: Colors.red,
+                    ),
+                  ),
+
+                  errorText: ageError,
                 ),
+
                 hint: Text(
                   'Age Range',
                   style: TextStyles.body.copyWith(
                     color: AppColors.blackColor,
                   ),
                 ),
+
                 icon: const Icon(
                   Iconsax.arrow_down_1_copy,
                   color: AppColors.blackColor,
                 ),
+
                 items: ageRanges.map((age) {
                   return DropdownMenuItem<String>(
                     value: age,
@@ -145,9 +208,11 @@ class _TellUsAboutYourselfScreenState
                     ),
                   );
                 }).toList(),
+
                 onChanged: (value) {
                   setState(() {
                     selectedAge = value;
+                    ageError = null;
                   });
                 },
               ),
@@ -185,20 +250,26 @@ class _GenderButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return SizedBox(
       height: 45,
+
       child: ElevatedButton(
         onPressed: onTap,
+
         style: ElevatedButton.styleFrom(
           elevation: 0,
+
           backgroundColor: isSelected
               ? AppColors.primaryColor
               : AppColors.accentColor,
+
           foregroundColor: isSelected
               ? AppColors.whiteColor
               : AppColors.blackColor,
+
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(100),
           ),
         ),
+
         child: Text(
           title,
           style: TextStyles.body.copyWith(
