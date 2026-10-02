@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
+import 'package:zara_app/core/constants/app_icons.dart';
 import 'package:zara_app/core/constants/appimages.dart';
+import 'package:zara_app/core/functions/navigations.dart';
 import 'package:zara_app/core/styles/appcolor.dart';
 import 'package:zara_app/core/styles/text_styles.dart';
 import 'package:zara_app/core/widgets/custom_svg_image.dart';
@@ -105,18 +107,9 @@ class _OrderListScreenState extends State {
         color: AppColors.greyColor
       )
     ),
-    trailing: const Icon(
-      Icons.arrow_forward_ios_rounded,
-      size: 16,
-      color: Colors.black54,
-    ),
+    trailing: CustomSvgImage(path: AppIcons.arrowrightSvg,color: AppColors.blackColor,height:25,width:25),
     onTap: () {
-      Navigator.push(
-        context,
-        MaterialPageRoute(
-          builder: (_) => TrackOrderScreen(order: order),
-        ),
-      );
+      pushTo(context, TrackOrderScreen(order: order));
     },
   ),
 );

@@ -7,6 +7,7 @@ import 'package:zara_app/features/home/pages/home_screen.dart';
 import 'package:zara_app/features/settings/SettingsSceen.dart';
 import 'package:zara_app/features/shop/page/notification.dart';
 import 'package:zara_app/features/shop/page/order.dart';
+import 'package:zara_app/features/shop/page/order_list_screen.dart';
 
 
 class MainAppScreen extends StatefulWidget {
@@ -20,7 +21,7 @@ class _MainAppScreenState extends State<MainAppScreen> {
   final List<Widget> Screens = [
     const HomeScreen(),
     const Notifications(),
-    const OrderScreen(),
+    const OrderListScreen(),
    const SettingsScreen(),
   ];
   @override
