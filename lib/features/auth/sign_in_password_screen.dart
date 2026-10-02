@@ -6,6 +6,7 @@ import 'package:zara_app/core/styles/text_styles.dart';
 import 'package:zara_app/core/widgets/custom_textfield.dart';
 import 'package:zara_app/core/widgets/main_button.dart';
 import 'package:zara_app/core/functions/Navigations.dart';
+import 'package:zara_app/features/Main/main_app_screen.dart';
 import 'package:zara_app/features/auth/forgot_password_screen.dart';
 
 class SignInPasswordScreen extends StatefulWidget {
@@ -36,8 +37,8 @@ class _SignInPasswordScreenState
   void continueButton() {
     if (formKey.currentState!.validate()) {
 
-      // هنا حطي الشاشة اللي عايزة تروحي لها بعد تسجيل الدخول
-      // pushTo(context, const HomeScreen());
+    
+       pushTo(context, const MainAppScreen());
       
     }
   }
