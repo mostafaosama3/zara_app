@@ -63,32 +63,6 @@ class _SignInScreenState extends State<SignInScreen> {
                 children: [
                   const Gap(90),
 
-                 CustomTextfield(hintText: 'Email Address'),
-
-                const Gap(16),
-
-                MainButton(
-                  title: 'Continue',
-                  ontap: () {
-                    pushTo(context, const SignInPasswordScreen());
-                  },
-                ),
-                const Gap(14),
-
-                Row(
-                  children: [
-                    Text(
-                      "Don't have an Account? ",
-                      style: TextStyles.caption2.copyWith(
-                        color: AppColors.blackColor,
-                        fontWeight: .w400,
-                      ),
-                    ),
-                  ],
-                  ),
-
-                  const Gap(28),
-
                   CustomTextfield(
                     hintText: 'Email Address',
                     keyboardType: TextInputType.emailAddress,

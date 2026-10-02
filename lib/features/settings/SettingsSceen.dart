@@ -5,6 +5,7 @@ import 'package:zara_app/core/functions/navigations.dart';
 import 'package:zara_app/core/styles/appcolor.dart';
 import 'package:zara_app/core/styles/text_styles.dart';
 import 'package:zara_app/core/widgets/custom_svg_image.dart';
+import 'package:zara_app/features/auth/sign_in_screen.dart';
 import 'package:zara_app/features/settings/wishlist_screen.dart';
 
 class SettingsScreen extends StatelessWidget {
@@ -107,7 +108,9 @@ class SettingsScreen extends StatelessWidget {
 
               // Sign Out Button
               TextButton(
-                onPressed: () {},
+                onPressed: () {
+                  pushReplacement(context, SignInScreen());
+                },
                 child: Text(
                   'Sign Out',
                   style: TextStyles.body.copyWith(

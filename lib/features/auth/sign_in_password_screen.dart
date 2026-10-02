@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
-import 'package:zara_app/features/Main/main_app_screen.dart';
-import 'package:zara_app/features/auth/sign_in_password_screen.dart';
+
 import 'package:zara_app/core/styles/appcolor.dart';
 import 'package:zara_app/core/styles/text_styles.dart';
 import 'package:zara_app/core/widgets/custom_textfield.dart';
@@ -73,22 +72,18 @@ class _SignInPasswordScreenState
 
                   const Gap(28),
 
-                 CustomTextfield(
-                  hintText: 'Password',
-                  obscureText: true,
-                ),
+                  CustomTextfield(
+                    hintText: 'Password',
+                    obscureText: true,
+                    validator: validatePassword,
+                  ),
 
                   const Gap(16),
 
-               MainButton(
-  title: 'Continue',
-  ontap: () {
-    pushReplacement(
-      context,
-      const MainAppScreen(),
-    );
-  },
-),
+                  MainButton(
+                    title: 'Continue',
+                    ontap: continueButton,
+                  ),
 
                   const Gap(14),
 

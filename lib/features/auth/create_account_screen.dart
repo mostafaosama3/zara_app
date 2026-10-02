@@ -91,60 +91,13 @@ class _CreateAccountScreenState extends State<CreateAccountScreen> {
 
                   const Gap(30),
 
-                 CustomTextfield(
-                  hintText: 'Firstname',
-                ),
-
-                const Gap(16),
-
-                 CustomTextfield(
-                  hintText: 'Lastname',
-                ),
-
-                const Gap(16),
-
-                 CustomTextfield(
-                  hintText: 'Email Address',
-                ),
-
-                const Gap(16),
-
-                 CustomTextfield(
-                  hintText: 'Password',
-                  obscureText: true,
-                ),
-
-                const Gap(24),
-
-               MainButton(
-  title: 'Continue',
-  ontap: () {
-    pushTo(
-      context,
-      const TellUsAboutYourselfScreen(),
-    );
-  },
-),
-
-                const Gap(14),
-
-               GestureDetector(
-  onTap: () {
-    pushTo(
-      context,
-      const ForgotPasswordScreen(),
-    );
-               
-  },
-
-                  child: Text(
-                    'Forgot Password? Reset',
-                    style: TextStyles.caption2.copyWith(
+                  Text(
+                    'Create Account',
+                    style: TextStyles.title1.copyWith(
                       color: AppColors.blackColor,
                       fontSize: 32,
                       fontWeight: FontWeight.w700,
                     ),
-                  ),
                   ),
 
                   const Gap(28),

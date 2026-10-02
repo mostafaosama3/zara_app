@@ -69,9 +69,14 @@ class _ForgotPasswordScreenState
 
                   const Gap(30),
 
-                 CustomTextfield(
-                  hintText: 'Enter Email address',
-                ),
+                  Text(
+                    'Forgot Password',
+                    style: TextStyles.title1.copyWith(
+                      color: AppColors.blackColor,
+                      fontSize: 32,
+                      fontWeight: FontWeight.w700,
+                    ),
+                  ),
 
                   const Gap(28),
 
@@ -96,4 +101,3 @@ class _ForgotPasswordScreenState
     );
   }
 }
-
