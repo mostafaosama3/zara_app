@@ -6,7 +6,9 @@ import 'package:zara_app/core/functions/Navigations.dart';
 import 'package:zara_app/core/styles/appcolor.dart';
 import 'package:zara_app/core/styles/text_styles.dart';
 import 'package:zara_app/core/widgets/custom_svg_image.dart';
+import 'package:zara_app/core/widgets/main_button.dart';
 import 'package:zara_app/features/auth/sign_in_screen.dart';
+import 'package:zara_app/features/home/categories_screen.dart';
 
 class OrderScreen extends StatelessWidget {
   const OrderScreen({super.key});
@@ -16,6 +18,7 @@ class OrderScreen extends StatelessWidget {
     return Scaffold(
       backgroundColor: AppColors.whiteColor,
       appBar: AppBar(
+        automaticallyImplyLeading: false,
         title: Text("Order",style: TextStyles.body.copyWith(fontWeight: .bold,fontSize: 18),),
         centerTitle: true,
       ),
@@ -44,26 +47,9 @@ class OrderScreen extends StatelessWidget {
               SizedBox(
                 width: 190,
                 height: 52,
-                child: ElevatedButton(
-                  onPressed: () {
-                    // push to Category
-                  },
-                  style: ElevatedButton.styleFrom(
-                    elevation: 0,
-                    backgroundColor: AppColors.primaryColor,
-                    foregroundColor: AppColors.whiteColor,
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(100),
-                    ),
-                  ),
-                  child: Text(
-                    'Explore Categories',
-                    style: TextStyles.body.copyWith(
-                      color: AppColors.whiteColor,
-                      fontWeight: FontWeight.w500,
-                    ),
-                  ),
-                ),
+                child:MainButton(title: "Explore Categories", ontap: () {
+                  pushReplacement(context, const CategoriesScreen());
+                })
               ),
             ],
           ),

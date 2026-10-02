@@ -4,6 +4,7 @@ import 'package:zara_app/core/constants/appimages.dart';
 import 'package:zara_app/core/styles/appcolor.dart';
 import 'package:zara_app/core/widgets/custom_svg_image.dart';
 import 'package:zara_app/features/home/home_screen.dart';
+import 'package:zara_app/features/settings/SettingsSceen.dart';
 import 'package:zara_app/features/shop/page/notification.dart';
 import 'package:zara_app/features/shop/page/order.dart';
 
@@ -20,10 +21,12 @@ class _MainAppScreenState extends State<MainAppScreen> {
     const HomeScreen(),
     const Notifications(),
     const OrderScreen(),
+   const SettingsScreen(),
   ];
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      
       body: Screens[currentIndex],
       bottomNavigationBar: _bottomNavBar(),
     );

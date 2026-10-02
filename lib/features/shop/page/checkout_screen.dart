@@ -137,13 +137,15 @@ class const CheckoutInfo({
               ), // مسافة بسيطة بين العنوان والتحتاني
               child: Row(
                 children: [
-                  Expanded(
+                  Flexible(
                     child: Text(
                       subtitle,
                       style: TextStyles.body.copyWith(fontWeight: .bold),
+                     maxLines: 1,
+                      overflow: TextOverflow.ellipsis,
                     ),
                   ),
-                  const Gap(8),
+                
                   // أيكونة الماستركارد (أو استخدم CustomSvgImage لو عندك)
                 if(iconWidget!=null)...[
                  iconWidget!,
