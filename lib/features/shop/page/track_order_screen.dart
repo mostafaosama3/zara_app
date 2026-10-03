@@ -21,20 +21,17 @@ class TrackOrderScreen extends StatelessWidget {
         centerTitle: true,
         leading: Padding(
           padding: const EdgeInsets.all(8.0),
-          child: 
-            AppBackButton(
-              onTap: (){
-                Navigator.pop(context);
-              },
-            ),
- 
+          child: AppBackButton(
+            onTap: () {
+              Navigator.pop(context);
+            },
+          ),
         ),
         title: Text(
           'Order #${order.orderId}',
-          style: const TextStyle(
+          style: TextStyles.body.copyWith(
             color: Colors.black,
             fontWeight: FontWeight.bold,
-            fontSize: 15,
           ),
         ),
       ),
@@ -52,17 +49,13 @@ class TrackOrderScreen extends StatelessWidget {
                   final step = order.trackingSteps[index];
                   final isLast = index == order.trackingSteps.length - 1;
                   return IntrinsicHeight(
-                    
                     child: Row(
-                      
                       crossAxisAlignment: CrossAxisAlignment.stretch,
                       children: [
                         // Column for Dot Indicator and Line
                         Column(
-                          
                           children: [
                             // Dot Container
-                            
                             Padding(
                               padding: const EdgeInsets.all(16),
                               child: Container(
@@ -83,10 +76,8 @@ class TrackOrderScreen extends StatelessWidget {
                                     : null,
                               ),
                             ),
-                            
                           ],
                         ),
-                      
                         // Step Title and Date
                         Expanded(
                           child: Padding(
@@ -107,11 +98,10 @@ class TrackOrderScreen extends StatelessWidget {
                                         : Colors.grey,
                                   ),
                                 ),
-                              
+
                                 Text(
                                   step.date,
-                                  style: const TextStyle(
-                                    fontSize: 14,
+                                  style: TextStyles.caption1.copyWith(
                                     color: Colors.grey,
                                   ),
                                 ),
@@ -124,53 +114,54 @@ class TrackOrderScreen extends StatelessWidget {
                   );
                 },
               ),
-          
-              const SizedBox(height: 20),
-          
+
+              const Gap(20),
+
               // 2. Order Items
-               Text(
+              Text(
                 'Order Items',
                 style: TextStyles.body.copyWith(
                   fontWeight: .bold,
-                  fontFamily: AppFonts.gabarito,
                 ),
               ),
               Gap(15),
               Container(
                 width: 380,
                 height: 72,
-                padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
+                padding: const EdgeInsets.symmetric(
+                  horizontal: 16,
+                  vertical: 12,
+                ),
                 decoration: BoxDecoration(
                   color: AppColors.accentColor,
                   borderRadius: BorderRadius.circular(8),
                 ),
                 child: Row(
                   children: [
-                   CustomSvgImage(path: AppImages.receiptSvg,color: AppColors.blackColor,height: 30,width: 40,),
-                    const SizedBox(width: 12),
-                    Text(
-                      '${order.itemsCount} items',
-                      style:TextStyles.body
+                    CustomSvgImage(
+                      path: AppImages.receiptSvg,
+                      color: AppColors.blackColor,
+                      height: 30,
+                      width: 40,
                     ),
+                    const Gap(12),
+                    Text('${order.itemsCount} items', style: TextStyles.body),
                     const Spacer(),
                     GestureDetector(
                       onTap: () {},
-                      child: const Text(
+                      child:  Text(
                         'View All',
-                        style: TextStyle(
+                        style: TextStyles.caption1.copyWith(
                           color: AppColors.primaryColor,
                           fontWeight: FontWeight.bold,
-                          fontSize: 12,
                         ),
                       ),
                     ),
                   ],
                 ),
               ),
-          
-              Gap(30),
-          
-              // 3. Shipping Details
+               const Gap(30),
+              // Shipping Details
               Text(
                 'Shipping details',
                 style: TextStyles.body.copyWith(fontWeight: .bold),
@@ -188,16 +179,15 @@ class TrackOrderScreen extends StatelessWidget {
                   children: [
                     Text(
                       order.shippingAddress,
-                      style: const TextStyle(
-                        fontSize: 13,
-                        height: 1.4,
-                        color: AppColors.blackColor,
-                      ),
+                      style: TextStyles.caption1 
                     ),
                     const Gap(7),
                     Text(
                       order.phoneNumber,
-                      style: const TextStyle(fontSize: 13, color: AppColors.blackColor),
+                      style: const TextStyle(
+                        fontSize: 13,
+                        color: AppColors.blackColor,
+                      ),
                     ),
                   ],
                 ),

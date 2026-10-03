@@ -11,32 +11,22 @@ class ProductImage extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.symmetric(
         horizontal: 16.0,
-      ), // نفس المسافة الجانبية للديزاين
+      ), 
       child: ClipRRect(
         borderRadius: BorderRadius.circular(
           16,
-        ), // حواف دائرية خفيفة لكل الصورة كارت واحد
+        ), 
         child: SizedBox(
-          height: 350, // الطول المناسب بالظبط زي التصميم
+          height: 350, 
           width: double.infinity,
           child: AppImage(
             path: url,
-            fit: BoxFit.contain,
-            errorBuilder: _imageError,
+            fit: BoxFit.contain,  
           ),
         ),
       ),
     );
   }
 
-  Widget _imageError(
-    BuildContext context,
-    Object error,
-    StackTrace? stackTrace,
-  ) {
-    return Container(
-      color: Colors.grey[200],
-      child: const Icon(Icons.broken_image, size: 50, color: Colors.grey),
-    );
-  }
+
 }

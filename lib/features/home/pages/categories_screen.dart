@@ -18,7 +18,7 @@ class CategoriesScreen extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              AppBackButton(onTap: () => pushTo(context, HomeScreen())),
+              AppBackButton(onTap: () => Navigator.pop(context),),
               const SizedBox(height: 14),
               const Text(
                 'Shop by Categories',

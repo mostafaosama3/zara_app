@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
 import 'package:zara_app/core/constants/app_icons.dart';
+import 'package:zara_app/core/functions/navigations.dart';
 import 'package:zara_app/core/styles/appcolor.dart';
 import 'package:zara_app/core/styles/text_styles.dart';
 import 'package:zara_app/core/widgets/app_back_button.dart';
@@ -14,39 +15,9 @@ import 'package:zara_app/features/shop/page/order_placed_screen.dart';
 class CheckoutScreen extends StatelessWidget {
   const CheckoutScreen({super.key});
 
-  void _placeOrder(BuildContext context) {
-    final order = OrderModel(
-      orderId: DateTime.now().millisecondsSinceEpoch.toString(),
-      itemsCount: cartItems.length,
-      status: 'Processing',
-      shippingAddress: '2715 Ash Dr. San Jose, South Dakota 83475',
-      phoneNumber: '121-224-7890',
-      trackingSteps: [
-        OrderStatusStep(
-          title: 'Order Placed',
-          date: 'Today',
-          isCompleted: true,
-        ),
-        OrderStatusStep(
-          title: 'Order Confirmed',
-          date: 'Today',
-          isCompleted: false,
-        ),
-        OrderStatusStep(title: 'Shipped', date: 'Pending', isCompleted: false),
-        OrderStatusStep(
-          title: 'Delivered',
-          date: 'Pending',
-          isCompleted: false,
-        ),
-      ],
-    );
-    orders.insert(0, order);
-    Navigator.of(context).pushReplacement(
-      MaterialPageRoute<void>(
-        builder: (_) => OrderPlacedScreen(order: order, total: 73),
-      ),
-    );
-  }
+  
+    
+  
 
   @override
   Widget build(BuildContext context) {
@@ -74,9 +45,9 @@ class CheckoutScreen extends StatelessWidget {
               subtitle: "2715 Ash Dr. San Jose, South Dakota 83475",
             ),
 
-            const SizedBox(height: 20),
+            const Gap(20),
             CheckoutInfo(title: 'Payment Method', subtitle: "**** 4187",iconWidget:  CustomSvgImage(
-                    path: AppIcons.mastercardSvg, // أو Image.asset لو صورة PNG
+                    path: AppIcons.mastercardSvg, 
                     width: 24,
                   ),),
             Gap(20),
@@ -85,15 +56,14 @@ class CheckoutScreen extends StatelessWidget {
             Payment_info(title: "Subtotal", price: "65"),
             Payment_info(title: "Shipping Cost", price: "8.00"),
             Payment_info(title: "Tax", price: "0.00"),
-            Payment_info(title: "Total", price: "73.00"),
-
+            Payment_info(title: "Total", price: "73.00"), 
             const SizedBox(height: 24),
             SizedBox(
               width: double.infinity,
               height: 54,
               child: MainButton(
                 title: 'Place Order',
-                ontap: () => _placeOrder(context),
+                ontap: () =>  pushReplacement(context, OrderPlacedScreen(order: orders.first, total: 73)),
               ),
             ),
           ],

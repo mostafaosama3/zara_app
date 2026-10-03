@@ -10,7 +10,12 @@ import 'package:zara_app/features/Main/main_app_screen.dart';
 import 'package:zara_app/features/auth/pages/forgot_password_screen.dart';
 
 class SignInPasswordScreen extends StatefulWidget {
-  const SignInPasswordScreen({super.key});
+  const SignInPasswordScreen({
+    super.key,
+    required this.email,
+  });
+
+  final String email;
 
   @override
   State<SignInPasswordScreen> createState() =>
@@ -19,8 +24,14 @@ class SignInPasswordScreen extends StatefulWidget {
 
 class _SignInPasswordScreenState
     extends State<SignInPasswordScreen> {
-
   final GlobalKey<FormState> formKey = GlobalKey<FormState>();
+  final TextEditingController passwordController = TextEditingController();
+
+  @override
+  void dispose() {
+    passwordController.dispose();
+    super.dispose();
+  }
 
   String? validatePassword(String? value) {
     if (value == null || value.isEmpty) {
@@ -36,10 +47,7 @@ class _SignInPasswordScreenState
 
   void continueButton() {
     if (formKey.currentState!.validate()) {
-
-    
-       pushTo(context, const MainAppScreen());
-      
+      pushTo(context, const MainAppScreen());
     }
   }
 
@@ -74,6 +82,7 @@ class _SignInPasswordScreenState
                   const Gap(28),
 
                   CustomTextfield(
+                    controller: passwordController,
                     hintText: 'Password',
                     obscureText: true,
                     validator: validatePassword,

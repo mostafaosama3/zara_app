@@ -1,6 +1,8 @@
 
 import 'package:flutter/material.dart';
+import 'package:gap/gap.dart';
 import 'package:zara_app/core/styles/appcolor.dart';
+import 'package:zara_app/core/styles/text_styles.dart';
 // نحطها في ملق الويدجت
 class CartItemTile extends StatelessWidget {
   final String title;
@@ -30,7 +32,7 @@ class CartItemTile extends StatelessWidget {
       ),
       child: Row(
         children: [
-          // صورة المنتج
+      
           ClipRRect(
             borderRadius: BorderRadius.circular(8),
             child: Image.network(
@@ -40,9 +42,8 @@ class CartItemTile extends StatelessWidget {
               fit: BoxFit.cover,
             ),
           ),
-          const SizedBox(width: 12),
+          const Gap(12),
 
-          // معلومات المنتج (العنوان، المقاس، اللون)
           Expanded(
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
@@ -59,7 +60,7 @@ class CartItemTile extends StatelessWidget {
                 const SizedBox(height: 6),
                 RichText(
                   text: TextSpan(
-                    style: const TextStyle(fontSize: 12, color: Colors.grey),
+                    style:  TextStyles.caption1.copyWith(color: AppColors.greyColor),
                     children: [
                       const TextSpan(text: 'Size - '),
                       TextSpan(
@@ -77,23 +78,21 @@ class CartItemTile extends StatelessWidget {
               ],
             ),
           ),
-
-          // السعر وأزرار التحكم بالكمية (+ / -)
           Column(
             crossAxisAlignment: CrossAxisAlignment.end,
             children: [
               Text(
                 price,
-                style: const TextStyle(
+                style: TextStyles.caption1.copyWith(
                   fontWeight: FontWeight.bold,
                   fontSize: 14,
                 ),
               ),
-              const SizedBox(height: 8),
+              const Gap(8),
               Row(
                 children: [
                   _buildActionButton(Icons.add, AppColors.primaryColor, () {}),
-                  const SizedBox(width: 6),
+                  const Gap(6),
                   _buildActionButton(Icons.remove, AppColors.primaryColor, () {}),
                 ],
               ),

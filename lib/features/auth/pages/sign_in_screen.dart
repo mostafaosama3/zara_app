@@ -19,6 +19,13 @@ class SignInScreen extends StatefulWidget {
 
 class _SignInScreenState extends State<SignInScreen> {
   final GlobalKey<FormState> formKey = GlobalKey<FormState>();
+  final TextEditingController emailController = TextEditingController();
+
+  @override
+  void dispose() {
+    emailController.dispose();
+    super.dispose();
+  }
 
   String? validateEmail(String? value) {
     if (value == null || value.trim().isEmpty) {
@@ -40,7 +47,7 @@ class _SignInScreenState extends State<SignInScreen> {
     if (formKey.currentState!.validate()) {
       pushTo(
         context,
-        const SignInPasswordScreen(),
+        SignInPasswordScreen(email: emailController.text.trim()),
       );
     }
   }
@@ -62,8 +69,17 @@ class _SignInScreenState extends State<SignInScreen> {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   const Gap(90),
-
+                      Text(
+                    'Sign in',
+                    style: TextStyles.title1.copyWith(
+                      fontSize: 32,
+                      fontWeight: FontWeight.w700,
+                      color: AppColors.blackColor,
+                    ),
+                  ),
+                   const Gap(28),
                   CustomTextfield(
+                    controller: emailController,
                     hintText: 'Email Address',
                     keyboardType: TextInputType.emailAddress,
                     validator: validateEmail,

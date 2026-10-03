@@ -40,7 +40,7 @@ class _OrderListScreenState extends State {
       ),
       body: Column(
         children: [
-          // 1. Horizontal Categories Filter
+          // Horizontal Categories Filter
           SizedBox(
             height: 32,
             child: ListView.separated(
@@ -76,7 +76,7 @@ class _OrderListScreenState extends State {
 
           const Gap(20),
 
-          // 2. Orders List from dummy_data.dart
+          //  Orders List from dummy_data
           Expanded(
             child: ListView.builder(
               padding: const EdgeInsets.symmetric(horizontal: 20),

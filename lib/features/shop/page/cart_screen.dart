@@ -32,11 +32,11 @@ class CartScreen extends StatelessWidget {
                     'Cart',
                     style: TextStyles.subtitle.copyWith(fontWeight: .bold),
                   ),
-                  const Gap(40), // لموازنة عنوان الشاشة في المنتصف
+                  const Gap(40), 
                 ],
               ),
               const Gap(20),
-              // --- 2. Remove All Button ---
+              // Remove All Button ---
               Align(
                 alignment: Alignment.centerRight,
                 child: TextButton(
@@ -44,16 +44,15 @@ class CartScreen extends StatelessWidget {
                   style: TextButton.styleFrom(
                     padding: EdgeInsets.zero,
                     minimumSize: Size.zero,
-                    tapTargetSize: MaterialTapTargetSize.shrinkWrap,
                   ),
                   child: Text('Remove All', style: TextStyles.body.copyWith(color: AppColors.blackColor)),
                 ),
               ),
-              const Gap(15),
-              // --- 3. Cart Items List ---
+              const Gap(10),
+              //  Cart Items List ---
               Expanded(
                 child: ListView(
-                  physics: const BouncingScrollPhysics(),
+            
                   children: const [
                     CartItemTile(
                       title: "Men's Relaxed Fit Hoodie",
@@ -100,7 +99,7 @@ class CartScreen extends StatelessWidget {
                ),),
               const Gap(20),
 
-              // --- 6. Checkout Button ---
+              //  Checkout Button ---
               SizedBox(
                 width: double.infinity,
                 height: 56,
