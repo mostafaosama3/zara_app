@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:zara_app/core/constants/app_fonts.dart';
 import 'package:zara_app/core/styles/appcolor.dart';
+import 'package:zara_app/features/Main/main_app_screen.dart';
 import 'package:zara_app/features/splash/splash_screen.dart';
-
-
 
 void main() {
   runApp(const MainApp());

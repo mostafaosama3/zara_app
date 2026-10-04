@@ -5,6 +5,7 @@ import 'package:zara_app/core/styles/text_styles.dart';
 import 'package:zara_app/core/widgets/app_back_button.dart';
 import 'package:zara_app/core/widgets/app_favourite_button.dart';
 import 'package:zara_app/data/models/product_model.dart';
+import 'package:zara_app/data/models/user_cart_model.dart';
 import 'package:zara_app/features/product_details/widgets/color_bottom_sheet.dart';
 import 'package:zara_app/features/product_details/widgets/product_image.dart';
 import 'package:zara_app/features/product_details/widgets/review_item.dart';
@@ -248,7 +249,23 @@ class _ProductDetailsScreenState extends State<ProductDetailsScreen> {
                     borderRadius: BorderRadius.circular(30),
                   ),
                 ),
-                onPressed: () {},
+                onPressed: () {
+                  for (var i = 0; i < quantity; i++) {
+                    CartStore.addOrUpdate(
+                      product,
+                      size: selectedSize,
+                      color: selectedColor,
+                    );
+                  }
+
+                  ScaffoldMessenger.of(context).showSnackBar(
+                    SnackBar(
+                      content: Text('${product.name} added to bag'),
+                      behavior: SnackBarBehavior.floating,
+                      duration: const Duration(seconds: 1),
+                    ),
+                  );
+                },
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [

@@ -86,8 +86,8 @@ final List<ProductModel> products = [
   ),
   ProductModel(
     id: 7,
-    name: 'Classic Sneakers',
-    path: 'https://d3vfig6e0r0snz.cloudfront.net/rcYjnYuenaTH5vyDF/images/products/f12e86c4d23bc706499d084d9128de0f.webp',
+    name: 'White Sneakers',
+    path: 'https://static.nike.com/a/images/t_web_pdp_535_v2/f_auto,u_9ddf04c7-2a9a-4d76-add1-d15af8f0263d,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/f094af40-f82f-4fb9-a246-e031bf6fc411/WMNS+AIR+FORCE+1+%2707.png',
     price: 60,
     category: 'Shoes',
     color: 'White',
